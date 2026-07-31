@@ -355,7 +355,23 @@ padding-right:20px;
 
 }
 
-.work-images{
+.work-images img{
+
+width:100%;
+
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.work-images img:hover{
+
+transform:translateY(-6px);
+
+}{
 
 display:flex;
 
@@ -377,5 +393,76 @@ object-fit:cover;
 border-radius:8px;
 
 border:1px solid #ddd;
+
+}ƒ
+
+/* Wantedly画像 */
+
+.recruit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-top:30px;
+
+}
+
+.recruit-grid img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    border:1px solid #e5e5e5;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.recruit-grid img:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 14px 30px rgba(0,0,0,.15);
+
+}
+
+@media(max-width:768px){
+
+.recruit-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.recruit-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+    margin-top:30px;
+}
+
+
+.recruit-grid img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:12px;
+    border:1px solid #ddd;
+}
+
+
+@media(max-width:768px){
+
+.recruit-grid{
+    grid-template-columns:1fr;
+}
 
 }
