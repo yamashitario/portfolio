@@ -1090,3 +1090,194 @@ strong {
     }
 
 }s
+
+/* ========================================
+   WORK 04｜ワクトリLABO
+======================================== */
+
+.labo-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.labo-result__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    flex: 1;
+    max-width: 650px;
+}
+
+.labo-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.labo-stat strong {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+}
+
+.labo-stat span {
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.labo-stat small {
+    margin-top: 8px;
+    font-size: 10px;
+    line-height: 1.6;
+    opacity: 0.55;
+}
+
+
+/* ----------------------------------------
+   LABO 記事カード
+---------------------------------------- */
+
+.labo-article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.labo-article-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #fff;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.labo-article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ----------------------------------------
+   アイキャッチ
+---------------------------------------- */
+
+.labo-article-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+
+.labo-article-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.labo-article-card:hover .labo-article-card__image img {
+    transform: scale(1.04);
+}
+
+
+/* ----------------------------------------
+   記事情報
+---------------------------------------- */
+
+.labo-article-card__body {
+    padding: 22px 24px 24px;
+}
+
+.labo-article-card__category {
+    margin: 0 0 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    opacity: 0.45;
+}
+
+.labo-article-card h5 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+.labo-article-card__link {
+    display: inline-block;
+    margin-top: 18px;
+    padding-bottom: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+}
+
+
+/* ----------------------------------------
+   LABOリンク
+---------------------------------------- */
+
+.labo-article-grid + .secondary-button {
+    margin-top: 28px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+    .labo-result {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .labo-result__stats {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: none;
+    }
+
+    .labo-stat {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        align-items: baseline;
+        column-gap: 12px;
+    }
+
+    .labo-stat strong {
+        grid-row: span 2;
+    }
+
+    .labo-stat span {
+        margin-top: 0;
+    }
+
+    .labo-stat small {
+        margin-top: 3px;
+    }
+
+    .labo-article-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .labo-article-card__body {
+        padding: 18px 20px 20px;
+    }
+
+}
