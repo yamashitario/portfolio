@@ -1281,3 +1281,64 @@ strong {
     }
 
 }
+/* =========================================
+   WORK 04：ワクトリLABO SEO RESULT
+   レイアウト崩れ修正
+========================================= */
+
+.labo-result {
+    display: block;
+    width: 100%;
+}
+
+.labo-result > div:first-child {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 32px;
+}
+
+.labo-result .result-box__label,
+.labo-result .result-box__title {
+    width: 100%;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.labo-result__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+.labo-stat {
+    min-width: 0;
+}
+
+.labo-stat strong,
+.labo-stat span,
+.labo-stat small {
+    display: block;
+}
+
+.labo-stat strong {
+    white-space: nowrap;
+}
+
+.labo-stat small {
+    line-height: 1.6;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+
+    .labo-result__stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
