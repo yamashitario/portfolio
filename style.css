@@ -1342,3 +1342,88 @@ strong {
     }
 
 }
+/* ========================================
+WORK 02
+求人アイキャッチ以降の表示範囲を統一
+======================================== */
+
+/* 各サブワークの横幅・余白を統一 */
+.sub-work {
+width: 100%;
+max-width: 100%;
+}
+
+/* ギャラリー全体の幅を統一 */
+.sub-work .gallery {
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+}
+
+/* 画像が元サイズの影響で
+セクションを横に広げないようにする */
+.sub-work .gallery a {
+min-width: 0;
+width: 100%;
+box-sizing: border-box;
+}
+
+/* 画像自体も親要素の幅に収める */
+.sub-work .gallery img {
+display: block;
+width: 100%;
+max-width: 100%;
+height: auto;
+box-sizing: border-box;
+}
+
+/* ========================================
+求人アイキャッチ
+======================================== */
+
+.recruitment-eyecatch-gallery {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 24px;
+}
+
+/* ========================================
+サイト内バナー
+======================================== */
+
+.sub-work .gallery--three {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 24px;
+}
+
+/* ========================================
+LINE
+======================================== */
+
+.sub-work .gallery--two {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 24px;
+}
+
+/* ========================================
+スマートフォン
+======================================== */
+
+@media (max-width: 768px) {
+
+```
+.sub-work .gallery--three,
+.recruitment-eyecatch-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.sub-work .gallery--two {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+```
+
+}
