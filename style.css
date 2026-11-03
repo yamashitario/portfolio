@@ -833,50 +833,66 @@ WORK 04｜ワクトリLABO
     overflow-wrap: break-word;
 }
 
-/* 実績3つ（23,341 PV / 1位 / 1位） */
+/* 実績3つ（23,341 PV / 1位 / 1位）
+   WORK 01 の RESULT と同じ見え方：大きな青数字＋縦の区切り線 */
 .labo-result .result-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: 0;
     width: 100%;
+    padding-top: 32px;
+    border-top: 1px solid #dbe1e4;
 }
 
 .labo-result .result-item {
     min-width: 0;
-    padding: 26px 24px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--white);
+    padding: 0 28px;
+    border: none;
+    background: transparent;
+}
+
+.labo-result .result-item:first-child {
+    padding-left: 0;
+}
+
+.labo-result .result-item:last-child {
+    padding-right: 0;
+}
+
+.labo-result .result-item + .result-item {
+    border-left: 1px solid #dbe1e4;
 }
 
 .labo-result .result-number {
     font-family: "Montserrat", sans-serif;
     color: var(--accent);
-    font-size: clamp(30px, 4vw, 46px);
+    font-size: clamp(34px, 4.2vw, 52px);
     font-weight: 700;
     line-height: 1;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.06em;
     white-space: nowrap;
 }
 
 .labo-result .result-number span {
-    margin-left: 2px;
+    margin-left: 4px;
     font-size: 0.42em;
     letter-spacing: 0;
 }
 
 .labo-result .result-label {
-    margin-top: 12px;
-    font-size: 12px;
+    margin-top: 14px;
+    color: var(--main);
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     line-height: 1.6;
 }
 
 .labo-result .result-detail {
-    margin-top: 6px;
+    margin-top: 4px;
     color: var(--subtext);
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     line-height: 1.7;
     word-break: normal;
     overflow-wrap: break-word;
@@ -1029,11 +1045,26 @@ Responsive
 
     .labo-result .result-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        padding-top: 24px;
     }
 
-    .labo-result .result-item {
-        padding: 22px 20px;
+    .labo-result .result-item,
+    .labo-result .result-item:first-child,
+    .labo-result .result-item:last-child {
+        padding: 22px 0;
+    }
+
+    .labo-result .result-item:first-child {
+        padding-top: 0;
+    }
+
+    .labo-result .result-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .labo-result .result-item + .result-item {
+        border-left: none;
+        border-top: 1px solid #dbe1e4;
     }
 
     .labo-article-grid {
